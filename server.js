@@ -10,6 +10,7 @@ var search = require('netsuite-search')(settings);
 var id=null;
 var vendor_name=null;
 
+app.set('port', (process.env.PORT || 5000));
 
 app.use(require('body-parser').urlencoded({
     extended: true
@@ -179,6 +180,11 @@ else
 }
 });
 
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});
+
+/*
 var server = app.listen(5000, function() {
   var host = server.address().address;
   var port = server.address().port;
@@ -186,7 +192,7 @@ var server = app.listen(5000, function() {
   console.log('Example app listening at http://%s:%s', host, port);
 
 });
-
+*/
 app.get('/login', function(req,res,next){
 	console.log('in login get ejs');
 	
