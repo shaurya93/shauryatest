@@ -38,6 +38,12 @@ var db = new SQL.Database(filebuffer);
 var buffer = new Buffer(data);
 fs.writeFileSync("supplier_master.db", buffer); */
 
+app.get('/', function(req,res,next){
+	console.log('in index get ejs');
+	
+	res.render('index',{});
+});
+
 /*get home page*/
 app.get('/index', function(req,res,next){
 	console.log('in index get ejs');
