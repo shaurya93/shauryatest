@@ -45,11 +45,11 @@ app.get('/', function(req,res,next){
 });
 
 /*get home page*/
-app.get('/index', function(req,res,next){
+/*app.get('/index', function(req,res,next){
 	console.log('in index get ejs');
 	
 	res.render('index',{});
-});
+});*/
 
 
 /* GET home page. */
