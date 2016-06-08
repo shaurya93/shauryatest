@@ -23,11 +23,11 @@ var formidable = require('formidable');
 //module.exports.rec_type = rec_type;
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views')); // here the .ejs files is in views folders
+app.set('views', __dirname + '/views'); // here the .ejs files is in views folders
 app.set('view engine', 'ejs'); //tell the template engine
 
 
-app.use( express.static( "public" ) );
+app.use( express.static(__dirname + '/public' ) );
 
 var router = express.Router();
 
