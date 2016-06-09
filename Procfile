@@ -1,1 +1,1 @@
-web: node shauryatest/node_modules/server.js
+web: node /node_modules/server.js
